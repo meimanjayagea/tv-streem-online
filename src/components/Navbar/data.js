@@ -2,7 +2,7 @@ export const dataMenu = [
   {
     id: 1,
     title: 'Home',
-    path: '/home'
+    path: '/'
   },
 
   {
