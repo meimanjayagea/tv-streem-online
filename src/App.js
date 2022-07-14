@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Dashboard from './components/Hello';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Dashboard />
+      <Footer />
+    </>
   );
 }
 
