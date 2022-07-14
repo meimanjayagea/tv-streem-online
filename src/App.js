@@ -1,15 +1,15 @@
-import './App.css';
+import React, { Fragment } from 'react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Dashboard from './components/Hello';
+import Contents from './containers';
 
 function App() {
   return (
-    <>
+    <Fragment>
       <Navbar />
-      <Dashboard />
+      <Contents />
       <Footer />
-    </>
+    </Fragment>
   );
 }
 

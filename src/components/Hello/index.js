@@ -2,9 +2,9 @@ import React from 'react';
 import logo from '../../logo.svg';
 import '../../App.css';
 
-const Dashboard = () => {
+const Home = () => {
   return (
-    <div className="bg-slate-400" style={{ height: 'calc(800px)' }}>
+    <div>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,4 +24,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Home;

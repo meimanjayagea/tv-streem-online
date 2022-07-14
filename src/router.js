@@ -1,13 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Switch, Routes, Route } from 'react-router-dom';
-import App from '../src/App';
+import Containers from './App';
+import Home from './containers/Home';
+import Live from './containers/Live';
 
 const AppRouter = () => {
   return (
     <Switch>
-      <Routes>
-        <Route path="/" element={<App />} />
-      </Routes>
+      <Containers>
+        <Routes>
+          <Route path="/" element={Home} />
+          <Route path="/live" element={Live} />
+        </Routes>
+      </Containers>
     </Switch>
   );
 };
