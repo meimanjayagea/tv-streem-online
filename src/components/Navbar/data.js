@@ -20,17 +20,18 @@ export const dataMenu = [
   {
     id: 4,
     title: 'Premier',
-    path: 'premier'
+    path: '/premier'
   },
 
   {
     id: 5,
     title: 'TV Show',
-    path: 'tv-show'
+    path: '/tv-show'
   },
 
   {
     id: 6,
-    title: 'Show'
+    title: 'Show',
+    path: 'Show'
   }
 ];
