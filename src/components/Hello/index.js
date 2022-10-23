@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import '../../App.css';
+import Plyr from 'plyr-react';
+import 'plyr-react/plyr.css';
 
 const Home = () => {
+  const videoSrc = {
+    type: 'video',
+    sources: [
+      {
+        src: 'blob:https://www.vidio.com/2115f78a-205d-48b6-9bf6-4512c3788d0e',
+        provider: ''
+      }
+    ]
+  };
+
   return (
     <div>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            Learn React
-          </a>
-        </header>
+      <div className="w-3/5 ml-20 mt-10">
+        <Plyr source={videoSrc} />
       </div>
     </div>
   );
