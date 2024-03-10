@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert } from '@material-tailwind/react';
 
-const AlertCustom = ({ childern, color, variant, icon, onClose, action }) => {
+const AlertCustom = ({ childern, color, variant, icon, onClose, action, className }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -12,7 +12,8 @@ const AlertCustom = ({ childern, color, variant, icon, onClose, action }) => {
         color={color}
         open={open}
         onClose={() => setOpen(onClose)}
-        action={action}>
+        action={action}
+        className={className}>
         {childern}
       </Alert>
     </div>
