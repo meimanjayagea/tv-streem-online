@@ -1,20 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Switch, Routes, Route } from 'react-router-dom';
-import Containers from './App';
-import Home from './containers/Home';
-import Live from './containers/Live';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import App from './App';
 
-const AppRouter = () => {
+export default function AppRouter() {
   return (
-    <Switch>
-      <Containers>
-        <Routes>
-          <Route path="/" element={Home} />
-          <Route path="/live" element={Live} />
-        </Routes>
-      </Containers>
-    </Switch>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Routes>
+        <Route path="/" element={<App page="home" />} />
+        <Route path="/live/:channelId?" element={<App page="live" />} />
+        <Route path="/channels" element={<App page="channels" />} />
+        <Route path="/guide" element={<App page="guide" />} />
+        <Route path="/favorites" element={<App page="favorites" />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default AppRouter;
+}
